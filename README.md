@@ -1,13 +1,14 @@
 # Newcoin Blockchain Software Development Kit
-## Newcoin foundation
+### Newcoin foundation
 
 ## Model
 
 Newcoin-sdk is an umbrella abstracting package simplifying the work with Newcoin blockchain.
+
 Main features include:
 
-* Abstractions of EOS operations such as account creation, token transfers, permissions etc.
-* Abstraction of ready to use contracts ( akin to operating system "Services")
+* Abstraction of EOS operations such as account creation, token transfers, permissions etc.
+* Abstraction of ready to use contracts ("Blockchain Services")
 * Abstraction of external query services such as indexing (hyperion) and marketplaces (atomic assets).
 
 Important principles: 
