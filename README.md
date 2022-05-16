@@ -48,13 +48,12 @@ New services need to follow the internal review and decision making by voting.
 
 <details>
 <summary>Libraries</summary>
-<p>The pools and DAO contracts have their own libraries:
+The pools and DAO contracts have their own libraries:
   * pool.nco  - https://github.com/@newcoin-foundation/newcoin.pool-js,  npm i @newcoin-foundation/newcoin.pool-js
   * pools.nco - https://github.com/@newcoin-foundation/newcoin.pools-js, npm i @newcoin-foundation/newcoin.pools-js
   * daos.nco  - https://github.com/@newcoin-foundation/newcoin.daos-js,  npm i @newcoin-foundation/newcoin.daos-js
   * farms.nco TBD
   * atomicassets
-</p>
 </details>
 
 ### Environments
