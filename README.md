@@ -14,7 +14,7 @@ Newcoin is based on the EOSIO open source software. developers.eos.io
 <p>
 It is believed that within this model, the ecosystem will bring higher value to the participants as opposed 
 to current models of economic competitions.
-
+</p>
 ### Features and goals
 Newcoin SDK abstracts the following:
 * EOS operations: such as account creation, permissions management, token transfers, account queries etc.
@@ -61,7 +61,7 @@ The pools and DAO contracts have their own libraries:
 </p>
 </details>
 
-### Testnets and the Mainnet
+### Environments
 
   There are three versions of the blockchain: dev, test, and main. As of writing this documentation most of the work is done in devnet.
   Each of the chains are defined by
@@ -90,14 +90,12 @@ The pools and DAO contracts have their own libraries:
 
 * An account with private key in order to send state altering transactions into blockchain
 * Currency on that account
+* Foundation is the entry point
 
 ### Initialization
 
 Newcoin constructor accepts Blockchain URLs and contract names working in this blockchain. 
 Ready URL and contract names as constants are provided in src/types.ts
-  
-### Devnet / Testnet / Mainnet environments
-  
   
   
  ## Service descriptions
