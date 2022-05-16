@@ -65,7 +65,8 @@ New services need to follow the internal review and decision making by voting.
   * the names of the specific contract instances
  
 #### Lists of URLs 
-  <details>Devnet: 
+  <details>
+  Devnet: 
   * 
   Testnet:
   * 
@@ -73,7 +74,7 @@ New services need to follow the internal review and decision making by voting.
   * 
   </details> 
    
-  #### Contract account names
+#### Contract account names
   <details>
   Devnet
   Testnet
