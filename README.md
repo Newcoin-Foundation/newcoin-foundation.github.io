@@ -3,9 +3,11 @@
 
 ## Model
 
-Newcoin SDK is an umbrella abstracting package enabling the work with Newcoin blockchain. 
+Newcoin SDK enables the work with Newcoin blockchain as a unified resource, abstracting multiple services under one umbrella. 
 <p>
-Fundamentally, Newcoin is based on the EOSIO open source software. Above that, it adds the following: 
+Newcoin is based on the EOSIO open source software. developers.eos.io
+  
+  Above that, it adds the following: 
 * Ready commonly used contracts to facilitate economic activity
 * Pre-meditated resource distribution process (RAM, CPU, NET) aligned with interests of the entire ecosystem
 * Community control over deployment of new contracts.
@@ -13,7 +15,7 @@ Fundamentally, Newcoin is based on the EOSIO open source software. Above that, i
 It is believed that within this model, the ecosystem will bring higher value to the participants as opposed 
 to current models of economic competitions.
 
-### Main features and goals
+### Features and goals
 
 Newcoin SDK abstracts the following:
 * EOS operations: such as account creation, permissions management, token transfers, account queries etc.
@@ -40,6 +42,7 @@ The rest are method-specific paramaters.
 
 Built in services: 
 * **eosio** and **eosio.token** contracts managing accounts and system currency 
+* **Atomicassets** factory contract for collection creation and NFT minting
 * **Main pool** (pool.nco): staking NCO for all participants of the ecosystem. Staked NCO turns into GNCO which is the internal currency of exchange.
 * **Creator pools** (pools.nco) allow staking the internal GNCO currency into pools of specific creators and/or DAOs
 * **DAO organization** (daos.nco) facilitates on-chain voting and collective economic decision making (buying NFTs, issuing currency, staking into other daos)
@@ -54,7 +57,8 @@ The pools and DAO contracts have their own libraries:
   * pool.nco  - https://github.com/@newcoin-foundation/newcoin.pool-js, npm i @newcoin-foundation/newcoin.pool-js
   * pools.nco - https://github.com/@newcoin-foundation/newcoin.pool-js, npm i @newcoin-foundation/newcoin.pool-js
   * daos.nco  - https://github.com/@newcoin-foundation/newcoin.daos-js, npm i @newcoin-foundation/newcoin.daos-js
-  * farms.nco
+  * farms.nco TBD
+  * atomicassets
 </p>
 </details>
 
@@ -65,15 +69,53 @@ The pools and DAO contracts have their own libraries:
   * the urls of node for transaction, hyperion and atomic assets servers.
   * the names of the specific contract instances
   
+  #### Lists of URLs 
+  <details>Devnet: 
+  * 
+  Testnet:
+  * 
+  Mainnet
+  * 
+  </details> 
+   
+  #### Contract account names
+  <details>
+  Devnet
+  Testnet
+  Mainnet
+  </details>
+    
 ## Working with Newcoin
-
 
 ### Pre-requisites
 
-You need 
-* an account with private key in order to send state altering transactions into blockchain
+* An account with private key in order to send state altering transactions into blockchain
 * Currency on that account
 
 ### Initialization
 
 Newcoin constructor accepts Blockchain URLs and contract names working in this blockchain. 
+Ready URL and contract names as constants are provided in src/types.ts
+  
+### Devnet / Testnet / Mainnet environments
+  
+  
+  
+ ## Service descriptions
+  
+ ### EOSIO blockchain services
+  * Accounts management 
+  * Permissions management
+  * transaction queries
+  
+  ### Main pool (GNCO token)
+  * GNCO tracking
+  * Receive staking benefits from main DAO distributions
+  
+  ### Creator pools
+  * Issue creator tokens
+  * One pool per creator 
+  
+  ### DAOs
+  * Economic entity 
+  * Comprises a pool and DAO voting structure (allocate discord channel automatically?)
