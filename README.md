@@ -1,12 +1,10 @@
 # Newcoin SDK documentation
-### by Newcoin foundation
+Newcoin foundation
 
 ## Model
 
 Newcoin SDK enables the work with Newcoin blockchain as a unified resource, abstracting multiple services under one umbrella. 
-<p>
 Newcoin is based on the EOSIO open source software. developers.eos.io
-</p>
 
 <p>Above that, it adds the following: 
 * Ready commonly used contracts to facilitate economic activity
