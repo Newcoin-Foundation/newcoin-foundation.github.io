@@ -65,21 +65,21 @@ New services need to follow the internal review and decision making by voting.
   * the names of the specific contract instances
  
 #### Lists of URLs 
-  <details>
+<details>
   Devnet: 
   * 
   Testnet:
   * 
   Mainnet
   * 
-  </details> 
+ </details> 
    
 #### Contract account names
-  <details>
+<details>
   Devnet
   Testnet
   Mainnet
-  </details>
+</details>
 
 ## Working with Newcoin
 
