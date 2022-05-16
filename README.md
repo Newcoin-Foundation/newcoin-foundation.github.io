@@ -6,17 +6,16 @@
 Newcoin SDK enables the work with Newcoin blockchain as a unified resource, abstracting multiple services under one umbrella. 
 <p>
 Newcoin is based on the EOSIO open source software. developers.eos.io
-  
-  Above that, it adds the following: 
+
+<p>Above that, it adds the following: 
 * Ready commonly used contracts to facilitate economic activity
 * Pre-meditated resource distribution process (RAM, CPU, NET) aligned with interests of the entire ecosystem
 * Community control over deployment of new contracts.
-
+<p>
 It is believed that within this model, the ecosystem will bring higher value to the participants as opposed 
 to current models of economic competitions.
 
 ### Features and goals
-
 Newcoin SDK abstracts the following:
 * EOS operations: such as account creation, permissions management, token transfers, account queries etc.
 * Newcoin shared contracts provided to community ("Services")
@@ -51,7 +50,7 @@ Built in services:
 New services need to follow the internal review and discussion process 
 (NCIP - NewCoin Improvement Process). When voted in, the block produceds will be expected to whitelist the contract. 
 
-<details><summary>#### Libraries</summary>
+<details><summary>Libraries</summary>
 <p>
 The pools and DAO contracts have their own libraries:
   * pool.nco  - https://github.com/@newcoin-foundation/newcoin.pool-js, npm i @newcoin-foundation/newcoin.pool-js
@@ -68,8 +67,8 @@ The pools and DAO contracts have their own libraries:
   Each of the chains are defined by
   * the urls of node for transaction, hyperion and atomic assets servers.
   * the names of the specific contract instances
-  
-  #### Lists of URLs 
+ 
+#### Lists of URLs 
   <details>Devnet: 
   * 
   Testnet:
