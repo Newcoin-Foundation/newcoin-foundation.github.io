@@ -7,14 +7,18 @@ Newcoin SDK enables the work with Newcoin blockchain as a unified resource, abst
 <p>
 Newcoin is based on the EOSIO open source software. developers.eos.io
 </p>
+
 <p>Above that, it adds the following: 
 * Ready commonly used contracts to facilitate economic activity
 * Pre-meditated resource distribution process (RAM, CPU, NET) aligned with interests of the entire ecosystem
 * Community control over deployment of new contracts.
+</p>
+
 <p>
 It is believed that within this model, the ecosystem will bring higher value to the participants as opposed 
 to current models of economic competitions.
 </p>
+
 ### Features and goals
 Newcoin SDK abstracts the following:
 * EOS operations: such as account creation, permissions management, token transfers, account queries etc.
