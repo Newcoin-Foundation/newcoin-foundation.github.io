@@ -1,7 +1,10 @@
 # Newcoin SDK documentation
 Newcoin foundation
 
-## Model
+## 
+
+
+## Working Model
 
 Newcoin SDK enables the work with Newcoin blockchain as a unified resource, abstracting multiple services under one umbrella. 
 Newcoin is based on the EOSIO open source software. developers.eos.io
@@ -9,21 +12,18 @@ Newcoin is based on the EOSIO open source software. developers.eos.io
 <p>Above that, it adds the following: 
 * Ready commonly used contracts to facilitate economic activity
 * Pre-meditated resource distribution process (RAM, CPU, NET) aligned with interests of the entire ecosystem
-* Community control over deployment of new contracts.
-</p>
-
+* Community control over deployment of new contracts.</p>
 <p>
 It is believed that within this model, the ecosystem will bring higher value to the participants as opposed 
-to current models of economic competitions.
-</p>
+to current models of economic competitions.</p>
 
-### Features and goals
+### Core goals and features
 Newcoin SDK abstracts the following:
 * EOS operations: such as account creation, permissions management, token transfers, account queries etc.
 * Newcoin shared contracts provided to community ("Services")
 * External query services: blockchain indexing (hyperion), marketplaces indexing (atomic assets).
 
-### Structure
+### Structure 
 AT the top level the methods follow CQRS pattern (Command and Query Responsibility Segregation) whereby 
 they are divided into State Altering methods creating transactionsn
 
@@ -31,15 +31,9 @@ they are divided into State Altering methods creating transactionsn
 broadcast. In some cases they return also details of an operatoin such as ID of a new allocated object.
 * Query methods return information about the state of the blockchain.
 
-### Data types 
+At the economic level 
 
-Data types are in @newcoin-foundation/newcoin-sdk/src/types.ts, roughly one data type per call. However, similar methods may share input data type. 
-  
-* Commonly, the input types of state altering operations contain who is performing the change ("actor", "author", "owner" etc) and her private key. 
-The rest are method-specific paramaters.
-* Common return type NCReturnType returns transaction IDs in named optional fields.
-
-### Services (shared contracts) 
+### Shared contracts: newcoin services 
 
 Built in services: 
 * **eosio** and **eosio.token** contracts managing accounts and system currency 
@@ -49,15 +43,15 @@ Built in services:
 * **DAO organization** (daos.nco) facilitates on-chain voting and collective economic decision making (buying NFTs, issuing currency, staking into other daos)
 * **Farms** allowing staking of creators' currency
 
-New services need to follow the internal review and discussion process 
+New services need to follow the internal review and decision making by voting. 
 (NCIP - NewCoin Improvement Process). When voted in, the block produceds will be expected to whitelist the contract. 
 
-<details><summary>Libraries</summary>
-<p>
-The pools and DAO contracts have their own libraries:
-  * pool.nco  - https://github.com/@newcoin-foundation/newcoin.pool-js, npm i @newcoin-foundation/newcoin.pool-js
-  * pools.nco - https://github.com/@newcoin-foundation/newcoin.pool-js, npm i @newcoin-foundation/newcoin.pool-js
-  * daos.nco  - https://github.com/@newcoin-foundation/newcoin.daos-js, npm i @newcoin-foundation/newcoin.daos-js
+<details>
+<summary>Libraries</summary>
+<p>The pools and DAO contracts have their own libraries:
+  * pool.nco  - https://github.com/@newcoin-foundation/newcoin.pool-js,  npm i @newcoin-foundation/newcoin.pool-js
+  * pools.nco - https://github.com/@newcoin-foundation/newcoin.pools-js, npm i @newcoin-foundation/newcoin.pools-js
+  * daos.nco  - https://github.com/@newcoin-foundation/newcoin.daos-js,  npm i @newcoin-foundation/newcoin.daos-js
   * farms.nco TBD
   * atomicassets
 </p>
@@ -85,7 +79,7 @@ The pools and DAO contracts have their own libraries:
   Testnet
   Mainnet
   </details>
-    
+
 ## Working with Newcoin
 
 ### Pre-requisites
@@ -98,23 +92,46 @@ The pools and DAO contracts have their own libraries:
 
 Newcoin constructor accepts Blockchain URLs and contract names working in this blockchain. 
 Ready URL and contract names as constants are provided in src/types.ts
+
+## Service descriptions
   
-  
- ## Service descriptions
-  
- ### EOSIO blockchain services
+### EOSIO native services
   * Accounts management 
   * Permissions management
   * transaction queries
+   
+### Data types 
+
+Data types are in @newcoin-foundation/newcoin-sdk/src/types.ts, roughly one data type per call. 
+However, similar methods may share input data type. 
   
-  ### Main pool (GNCO token)
+* Commonly, the input types of state altering operations contain who is performing the change ("actor", "author", "owner" etc) and her private key. 
+The rest are method-specific paramaters.
+* Common return type NCReturnType returns transaction IDs in named optional fields.
+
+### Main (newcoin) pool 
   * GNCO tracking
   * Receive staking benefits from main DAO distributions
+  * Introduce special proposals: whitelist contract, issue tokens to applicant
   
-  ### Creator pools
+### Creator pools
+  * Investment analogy
   * Issue creator tokens
   * One pool per creator 
   
-  ### DAOs
-  * Economic entity 
+### DAOs
+  * Economic entity
   * Comprises a pool and DAO voting structure (allocate discord channel automatically?)
+
+### Data types 
+
+Data types are in @newcoin-foundation/newcoin-sdk/src/types.ts, roughly one data type per call. However, similar methods may share input data type. 
+  
+* Commonly, the input types of state altering operations contain who is performing the change ("actor", "author", "owner" etc) and her private key. 
+The rest are method-specific paramaters.
+* Common return type NCReturnType returns transaction IDs in named optional fields.
+
+
+## Newcoin extensions
+  * NCIP process 
+  
