@@ -5,20 +5,20 @@
 
 Newcoin-sdk is an umbrella abstracting package simplifying the work with Newcoin blockchain.
 
-Main features include:
+### Main features and goals
 
 * Abstraction of EOS operations such as account creation, token transfers, permissions etc.
 * Abstraction of ready to use contracts ("Blockchain Services")
 * Abstraction of external query services such as indexing (hyperion) and marketplaces (atomic assets).
 
-Important principles: 
+### Structure
 The methods are divided into State Altering and Query methods. State Altering methods usually 
 return only the transaction ID in case a transaction has been successfully broadcast. 
 In some cases they return also details of an operatoin such as ID of a new allocated object.
 
-Data types 
+### Data types 
 
-Data types are in src/types.ts, roughly one data type per call however similar methods may share input data type.
+Data types are in @newcoin-sdksrc/types.ts, roughly one data type per call however similar methods may share input data type.
 Input types of state altering operations must contain the actor ( could also be called "owner", "author", "proposer" -
 the account requesting the action, and its private key. 
 The rest of parameters are method-specific.
@@ -26,7 +26,7 @@ The rest of parameters are method-specific.
 Common return type NCReturnType returns transaction IDs in fields. 
 
 
-Services 
+### Services 
 
 Built in: 
 * system token contract eosio.token manages 
@@ -35,3 +35,15 @@ Built in:
 * DAO organization including on-chain voting and collective economic decision making (staking into others, buying NFTs, issuing currency)
 * Local NFT Marketplace
 
+## Working with Newcoin
+
+
+You need 
+* an account with private key in order to send state altering transactions into blockchain
+* Currency on that account
+
+
+
+### Initialization
+
+Newcoin constructor accepts Blockchain URLs and contract names working in this blockchain. 
