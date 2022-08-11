@@ -9,7 +9,7 @@ Newcoin foundation
 Newcoin SDK enables the work with Newcoin blockchain as a unified resource, abstracting multiple services under one umbrella. 
 
 Above that, it adds the following: 
-* Based on the EOSIO open source software
+* Based on the open source consensus SW
 * Ready to use contracts to facilitate economic activity
 * Top-down rather than market based resource distribution process (RAM, CPU, NET) aligned with interests of the entire ecosystem
 * Community control over deployment of new contracts.
@@ -19,9 +19,9 @@ to current models of economic competitions.
 
 ### Core features
 Newcoin SDK abstracts the following:
-* EOS operations: such as account creation, permissions management, token transfers, account queries etc.
+* Blockchain operations: such as account creation, permissions management, token transfers, account queries etc.
 * Newcoin shared contracts provided to community ("Services")
-* External query services: blockchain indexing (hyperion), marketplaces indexing (atomic assets).
+* External query services: blockchain indexing (hyperion), assets indexing (atomic assets).
 
 ### Structure 
 
